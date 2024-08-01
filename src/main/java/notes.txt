@@ -1,0 +1,20 @@
+A Program to demonstrate the use of @PreConstruct and @PostDestroy annotation:
+Programs:
+* Product.java
+* AppConfig.java
+* Test.java
+Note:
+* @PostConstruct, @PreDestroy annotation are not belongs to Spring, those are java annotations.
+* This two annotation are used at method level only.
+* @PostConstruct annotated method is executed after dependency injection is done.
+* @PreDestroy annotated method is executed before the instance is removed from container.
+* @PostConstruct, @PreDestroy annotation are part of the standard java libraries from java6 to java8, the entire javax.annotation package got separated from the core Java modules in JDK 9 and eventually removed in JDK 11.
+* As of Jakarta EE 9, the package lives in jakarta.annotation now. the you have add below artifact in pom.xml.
+<dependency>
+   <groupId>javax.annotation</groupId>
+   <artifactId>javax.annotation-api</artifactId>
+   <version>1.3.2</version>
+</dependency>
+Output:
+From productPostConstruct method in Product class
+From productPreDestroy method in Product class
